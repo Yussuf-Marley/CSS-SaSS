@@ -1,0 +1,92 @@
+
+//SaSS Inheritance where class image image inherits properties of class pic
+
+.pic{
+	width: 100px;
+	height: 100px;
+}
+
+.emage{
+	@extend .pic;
+	border-color: 1px solid #333;
+}
+
+
+
+//SaSS mixin to give image elements round corners
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.image{
+	@include border-radius(10px);
+}
+
+
+//SaSS Operators
+
+.container{
+	width: 100%;
+}
+
+article[role="main"]{
+	float: left;
+	width: 600px / 960px * 100%;
+}
+
+aside[role="complementary"]{
+	float: right;
+	width: 300px / 960px * 100%;
+}
+
+
+//SaSS Nesting
+
+.header{
+	padding: 10em 0 14em;
+	h1{
+		font-style: italic;
+		font-family: Tahoma, Georgia;
+	}
+}
+
+
+.footer{
+	p{
+		color: #777;
+		padding: 0 15px;
+	}
+}
+
+.header,
+.footer{
+	background: #f7f7f7;
+	align: center;
+}
+
+
+
+//Some Basic CSS
+
+li{
+	display:inline-block;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 940px;
+}
+
+.nav{
+	display: block;
+	text-align: left;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+
